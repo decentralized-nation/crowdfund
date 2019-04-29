@@ -20,4 +20,9 @@ contract Campaign {
         require(msg.sender == manager);
         _;
     }
+
+    function Campaign(uint minimum, address creator) public {
+        manager = creator;
+        minimumContribution = minimum;
+    }
 }
