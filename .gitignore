@@ -2,3 +2,5 @@
 package-lock.json
 
 /ethereum/build
+
+dev.js
