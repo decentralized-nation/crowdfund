@@ -25,4 +25,11 @@ contract Campaign {
         manager = creator;
         minimumContribution = minimum;
     }
+
+    function contribute() public payable {
+        require(msg.value > minimumContribution);
+        
+        approvers[msg.sender] = true;
+        approversCount++;
+    }
 }
