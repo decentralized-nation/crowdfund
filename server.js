@@ -8,9 +8,11 @@ const app = next({
 const routes = require('./routes');
 const handler = routes.getRequestHandler(app);
 
+const port = process.env.PORT || 3000;
+
 app.prepare().then(() => {
-    createServer(handler).listen(3000, (err) => {
+    createServer(handler).listen(port, (err) => {
         if (err) throw err;
-        console.log('Server Started');
+        console.log(`Server started on port ${port}`);
     });
 });
