@@ -3,6 +3,6 @@ package-lock.json
 
 /ethereum/build
 
-dev.js
+keys_dev.js
 
 .next
