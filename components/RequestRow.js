@@ -24,7 +24,7 @@ class RequestRow extends Component {
 
     render() {
         const { Row, Cell } = Table;
-        const { id, request, approversCount } = this.props;
+        const { id, request, approversCount, manager, balance } = this.props;
         const readyToFinalize = request.approvalCount > approversCount / 2;
 
         return (
@@ -40,9 +40,9 @@ class RequestRow extends Component {
                     )}
                 </Cell>
                 <Cell>
-                    {request.complete ? null : (
+                    {request.complete ? null : ((balance < request.value) ? (<font color="red">Not Enough Funds</font>) : (
                         <Button color="teal" basic onClick={this.onFinalize}>Finalize</Button>
-                    )}
+                    ))}
                 </Cell>
             </Row>
         )
