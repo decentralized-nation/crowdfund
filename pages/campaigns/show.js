@@ -39,17 +39,17 @@ class CampaignShow extends Component {
                 style: { overflowWrap: 'break-word' }
             },
             {
-                header: minimumContribution,
+                header: minimumContribution.toString(),
                 meta: 'Minimum Contribution (wei)',
                 description: 'You must contribute at least this much wei to become an approver'
             },
             {
-                header: requestsCount,
+                header: requestsCount.toString(),
                 meta: 'Number of Requests',
                 description: 'A request tries to withdraw money from the contract. Requests must be approved by approvers'
             },
             {
-                header: approversCount,
+                header: approversCount.toString(),
                 meta: 'Number of Approvers',
                 description: 'Number of people who have already donated to this campaign'
             },
