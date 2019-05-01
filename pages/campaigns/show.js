@@ -54,7 +54,7 @@ class CampaignShow extends Component {
                 description: 'Number of people who have already donated to this campaign'
             },
             {
-                header: web3.utils.fromWei(balance, 'ether'),
+                header: web3.utils.fromWei(balance.toString(), 'ether'),
                 meta: 'Campaign Balance (ether)',
                 description: 'The balance is how much money this campaign has left to spend'
             },
